@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    public int speed = 5;
+    public int speed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +17,8 @@ public class Cube : MonoBehaviour
   //      gameObject.transform.Translate(0, speed, 0);
   //  }
 
-    void FixedUpdate()
+    void Update()
     {
-        transform.Translate(0, Time.fixedDeltaTime, 0);
+        transform.Translate(0, speed * Time.fixedDeltaTime, 0);
     }
 }
